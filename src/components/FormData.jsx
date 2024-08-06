@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-
+import './FormData.css'
 function FormData(props) {
     const [title,setTitle]=useState('');
     const [description,setDescription]=useState('');
@@ -23,10 +23,16 @@ function FormData(props) {
   return (
    <>
    <form onSubmit={onSubmitHandle}>
+    <div className="mainForm">
+    <div className='inputs'>
     <label>Title</label>
     <input type='text' onChange={titleHandler}/>
+    <label>Description</label>
+    
     <input type='text' onChange={descriptionHandler}/>
-    <button type='submit'>ADD</button>
+    </div>
+    <button className='button' type='submit'>ADD</button>
+    </div>
    </form>
       </>
   )

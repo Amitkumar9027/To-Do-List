@@ -1,0 +1,41 @@
+form{
+    display: flex;
+    justify-content: space-evenly;
+}
+.mainForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+width: 50vw;
+    height: 150px;
+    background-color: rgba(30, 6, 53, 0.368);
+    color: white;
+    border-radius: 20px;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+.button{
+    background-color: skyblue;
+    border-radius: 5px;
+}
+ /* ----------------------
+ ------------------------
+ ---------------------
+ -----------------------
+ ---------------------
+ -------------------------*/
+  
+  .listLiDiv{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    justify-content: space-evenly;
+    background-color: rgb(219, 183, 252);
+  }
+  ul{
+    list-style-type:decimal;
+  }
