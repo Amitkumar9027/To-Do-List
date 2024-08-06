@@ -6,17 +6,24 @@ import './App.css'
 import AllList from './components/AllList'
 
 function App() {
-  const [title,setTitle]=useState([]);
+  const [data,setData]=useState([]);
 const getDataFromChild=(gettedData) =>{
 console.log("in app.js")
-setTitle((prevTitle)=>[...prevTitle, gettedData])
-console.log(title)
+console.log(gettedData)
+setData((prevTitle)=>[...prevTitle, {title :gettedData.title2,description:gettedData.description2}])
+console.log(data)
 
 }
+const removeHandler= (index)=>{
+  const newData=data.filter((a,i)=>i!==index);
+  setData(newData);
+}
+
+
   return (
    <>
    <FormData onAddData={getDataFromChild}/>
-   <AllList todo={title}/>
+   <AllList todo={data} removeHandle={removeHandler}/>
    </>
   )
 }
